@@ -1,22 +1,14 @@
-let cb = (sV, element) => {
-  return sV + element;
-};
+function reduce(elements, cb, startingValue = elements[0]) {
+    if (!elements || !cb || !Array.isArray(elements)) {
+        return;
+    }
+    let value = startingValue;
+    for (let index = 0; index < elements.length; index++) {
 
-const reduce =(elements, cb, startingValue)=>{
-  let i;
-  if (startingValue) {
-    i = 0;
-  } else {
-    startingValue = elements[0];
-    i = 1;
-  }
-  for (i; i < elements.length; i++) {
-    startingValue = cb(startingValue, elements[i]);
-  }
-  return startingValue;
+        value = cb(value, elements[index], index, elements)
+
+    }
+    return value
 }
 
-module.exports = {
-  reduce,
-  cb,
-};
+module.exports = {reduce}
