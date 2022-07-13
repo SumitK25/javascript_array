@@ -1,22 +1,18 @@
-let det = (it) => {
+function flatten(elements) {
+    let returningArray = [];
+    if (!elements) {
+        return []
+    }
+    if (typeof elements === 'number') {
+        returningArray.push(elements)
+    }
+    else {
+        for (let index = 0; index < elements.length; index++) {
+            returningArray = returningArray.concat(flatten(elements[index]))
 
-  let n;
-  if (!Array.isArray(it)) {
-    n = it;
-  } else {
-    n = det(it[0]);
-  }
-  return n;
-};
-
-const flatten= elements=> {
-  let empArr = [];
-  for (let i = 0; i < elements.length; i++) {
-    let n = det(elements[i]);
-    empArr.push(n);
-  }
-  return empArr;
-  
+        }
+    }
+    return returningArray
 }
 
-module.exports = flatten;
+module.exports = {flatten}
