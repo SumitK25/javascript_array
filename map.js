@@ -1,18 +1,12 @@
-let { items } = require("./arrays");
-
-let elements = items;
-
-
-function map(elements,cb){
-  let er = [];
-  for(let i=0;i<elements.length;i++){
-    
-    er.push(cb(elements[i]) )
-  }
-// console.log(er)
-return er
+function map(elements, cb) {
+    if (!elements || !cb) {
+        return []
+    }
+    let res = []
+    for (let i = 0; i < elements.length; i++) {
+        res[i] = cb(elements[i], i, elements)
+    }
+    return res;
 }
 
-// map(elements)
-
-module.exports=map
+module.exports = {map}
