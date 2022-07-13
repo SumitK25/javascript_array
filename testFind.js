@@ -1,4 +1,4 @@
-const file = require("../filter")
+const file = require("./filter.js")
 
 const items = [1, 2, 3, 4, 5, 5];
 
