@@ -1,5 +1,14 @@
-const items = require("../arrays.js");
-const filter = require("../filter.js");
+const file = require("../filter")
 
-let we = filter.a(items.items, filter.b);
-console.log(we);
+const items = [1, 2, 3, 4, 5, 5];
+
+const even = (n) => {
+    if (n % 2 == 0) {
+        return true
+    }
+    else {
+        return false
+    }
+}
+
+console.log(file.filter(items, even))
