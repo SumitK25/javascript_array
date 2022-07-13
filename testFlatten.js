@@ -1,10 +1,5 @@
-const ssq = require('../arrays.js');
-const flatten = require('../flatten.js');
+const file = require("../flatten")
 
-// console.log(sample.nestedArray)
-const wt = flatten(ssq.nestedArray);
+const nestedArray = [1, [2], [[3]], [[[4]]]];
 
-console.log(wt);
-
-
-
+console.log(file.flatten(nestedArray))
