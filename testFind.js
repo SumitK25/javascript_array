@@ -1,7 +1,14 @@
-const items = require("../arrays.js");
-const find = require("../find.js");
+const file = require("../filter")
 
-let v = 2;
+const items = [1, 2, 3, 4, 5, 5];
 
-let k = find.find(items.items, find.cb, v);
-console.log(k);
+const even = (n) => {
+    if (n % 2 == 0) {
+        return true
+    }
+    else {
+        return false
+    }
+}
+
+console.log(file.filter(items, even))
