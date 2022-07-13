@@ -1,14 +1,13 @@
-const file = require("../filter")
-
-const items = [1, 2, 3, 4, 5, 5];
-
-const even = (n) => {
-    if (n % 2 == 0) {
-        return true
+function find(elements, cb) {
+    if (!elements || !cb) {
+        return undefined
     }
-    else {
-        return false
+    for (let index = 0; index < elements.length; index++) {
+        if (cb(elements[index])) {
+            return elements[index]
+        }
     }
+    return undefined
 }
 
-console.log(file.filter(items, even))
+module.exports = {find}
