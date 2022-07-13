@@ -1,15 +1,5 @@
-let { items } = require("../arrays");
-const each = require("../each.js")
-let elements=items
+const eachFile = require("../each")
 
+const items = [1, 2, 3, 4, 5, 5];
 
-function cb(i){
-    i(elements)
-}
-
-cb(each)
-
-
-
-
-
+eachFile.each(items, (element, index) => { console.log(element); })
