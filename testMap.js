@@ -1,10 +1,5 @@
-let { items } = require("../arrays")
-const map =require("../map.js")
+const mapFile = require("../map")
 
+const items = [1, 2, 3, 4, 5, 5];
 
-const double =  (ele)=>{
-    return ele *2
-}
-
-console.log(map(items,double))
-
+console.log(mapFile.map(items, (element) => element))
