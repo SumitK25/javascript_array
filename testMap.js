@@ -1,4 +1,4 @@
-const mapFile = require("../map")
+const mapFile = require("./map.js")
 
 const items = [1, 2, 3, 4, 5, 5];
 
