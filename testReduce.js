@@ -1,8 +1,6 @@
-const items = require("../arrays.js");
-const fn = require("../reduce.js");
+const reduceFile = require("../reduce")
 
-let startValue = 0;
+const items = [1, 2, 3, 4, 5, 5];
 
-let k = fn.reduce(items.items, fn.cb, startValue);
-
-console.log(k);
+result = reduceFile.reduce(items, (startingValue, CurrValue) => startingValue + CurrValue);
+console.log(result);
