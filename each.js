@@ -1,17 +1,21 @@
-let { items } = require("../arrays")
-
-let elements = items
-
-
-// console.log(abc)
-
-
-function each(elements){
-  for(let i=0;i<elements.length;i++){
-    console.log(elements[i],i)
-  }
+function each(elements,cb)
+{
+    if (!elements || !cb)
+    {
+        return true;
+    }
+    if (Array.isArray(elements) && typeof cb === 'function')
+    {
+        for (let i = 0; i < elements.length; i++)
+        {
+            cb(elements[i],i,elements);
+        }
+    }
+    else
+    {
+        return false;
+    }
 }
 
-// each(elements)
 
-module.exports=each
+module.exports = {each}
