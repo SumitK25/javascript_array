@@ -1,4 +1,4 @@
-const reduceFile = require("../reduce")
+const reduceFile = require("./reduce.js")
 
 const items = [1, 2, 3, 4, 5, 5];
 
