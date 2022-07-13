@@ -1,19 +1,14 @@
-let cb = (element, k) => {
-  let a;
-  element === k ? (a = true) : (a = false);
-  return a;
-};
+const file = require("../filter")
 
-const find=(elements, cb, v)=> {
-  for (let i = 0; i < elements.length; i++) {
-    let a = cb(elements[i], v);
-    if (a) {
-      return elements[i];
+const items = [1, 2, 3, 4, 5, 5];
+
+const even = (n) => {
+    if (n % 2 == 0) {
+        return true
     }
-  }
+    else {
+        return false
+    }
 }
 
-module.exports = {
-  find,
-  cb,
-};
+console.log(file.filter(items, even))
