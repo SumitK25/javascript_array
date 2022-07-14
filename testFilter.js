@@ -1,14 +1,14 @@
-const file = require("./filter.js")
+const filter = require("./filter.js")
 
 const items = [1, 2, 3, 4, 5, 5];
 
-const even = (n) => {
-    if (n % 2 == 0) {
+const odd = (n) => {
+    if (n % 2 == 1) {
         return true
     }
     else {
         return false
     }
 }
-
-console.log(file.filter(items, even))
+const result = filter(items, odd)
+console.log(result);
