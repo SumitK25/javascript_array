@@ -12,7 +12,7 @@ function flatten(elements) {
 
         }
     }
-    return returningArray
+    return returningArray;
 }
 
-module.exports = {flatten}
+module.exports = flatten;
