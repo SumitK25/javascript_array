@@ -1,12 +1,11 @@
+let { items } = require("./arrays.js");
+let elements = items;
 function map(elements, cb) {
-    if (!elements || !cb) {
-        return []
-    }
-    let res = []
+    let arr = [];
     for (let i = 0; i < elements.length; i++) {
-        res[i] = cb(elements[i], i, elements)
-    }
-    return res;
-}
 
-module.exports = {map}
+        arr.push(cb(elements[i]))
+    }
+    return arr
+}
+module.exports = map;
