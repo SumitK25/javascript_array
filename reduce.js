@@ -8,7 +8,7 @@ function reduce(elements, cb, startingValue = elements[0]) {
         value = cb(value, elements[index], index, elements)
 
     }
-    return value
+    return value;
 }
 
-module.exports = {reduce}
+module.exports = reduce;
