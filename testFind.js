@@ -1,4 +1,4 @@
-const file = require("./filter.js")
+const filter = require("./filter.js")
 
 const items = [1, 2, 3, 4, 5, 5];
 
@@ -11,4 +11,5 @@ const even = (n) => {
     }
 }
 
-console.log(file.filter(items, even))
+const result = filter(items, even)
+console.log(result);
